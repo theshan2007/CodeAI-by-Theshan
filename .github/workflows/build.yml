@@ -24,22 +24,21 @@ jobs:
           mkdir -p gradle/wrapper
           curl -L "https://github.com/gradle/gradle/raw/v8.7.0/gradle/wrapper/gradle-wrapper.jar" \
             -o gradle/wrapper/gradle-wrapper.jar
-          echo "Gradle wrapper jar downloaded!"
-          ls -la gradle/wrapper/
 
       - name: 🔧 Make Gradlew Executable
         run: chmod +x gradlew
 
-      - name: 🤖 Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: 📦 Accept Android Licenses
-        run: yes | sdkmanager --licenses || true
+      - name: 📦 Accept Android SDK Licenses
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "build-tools;35.0.0" "platforms;android-35" || true
 
       - name: 🏗️ Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
         env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
+          ANDROID_HOME: /usr/local/lib/android/sdk
+          ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
       - name: 📦 Upload APK
         uses: actions/upload-artifact@v4
