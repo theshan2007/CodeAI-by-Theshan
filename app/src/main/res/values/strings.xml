@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CodeAI by Theshan</string>
+    <string name="hint_prompt">Describe your app idea...</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_copy">Copy Code</string>
+    <string name="btn_share">Share</string>
+    <string name="settings">Settings</string>
+    <string name="welcome_message">Hi! I\'m CodeAI by Theshan 🤖\n\nDescribe any app you want and I\'ll generate the complete code for it!\n\nExamples:\n• "Calculator app"\n• "Todo list with dark theme"\n• "Weather app with animations"\n\nJust type and I\'ll code it! 🚀</string>
+    <string name="api_key_hint">Gemini API Key</string>
+    <string name="get_api_key">Get free API key at: aistudio.google.com</string>
+</resources>

@@ -1,0 +1,20 @@
+# Built files
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+*.properties
+!gradle/wrapper/gradle-wrapper.properties
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# API keys (NEVER commit these!)
+secrets.properties
+api_keys.txt

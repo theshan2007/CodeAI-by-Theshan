@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CodeAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#7B68EE</item>
+        <item name="colorPrimaryVariant">#5B4FCE</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#A0A0FF</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:colorBackground">#0D0D0D</item>
+        <item name="colorSurface">#1A1A2E</item>
+        <item name="colorOnSurface">#E0E0FF</item>
+        <item name="android:statusBarColor">#0D0D0D</item>
+        <item name="android:navigationBarColor">#1A1A2E</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="ModeChip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg_selector</item>
+        <item name="chipStrokeColor">#7B68EE</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">#E0E0FF</item>
+        <item name="chipMinHeight">36dp</item>
+    </style>
+</resources>
